@@ -1,0 +1,131 @@
+/* PARA QUE TODO TENGA EL MISMO MARGEN Y BORDE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* LA BASE */
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* EL MENU PPAL*/
+header {
+    width: 100%;
+    background-color: lightblue;
+    color: lightcyan;
+    padding: 15px;
+}
+
+.menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.menu li {
+    padding: 8px;
+    background-color: lightblue;
+    color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.menu li:hover {
+    background-color: lightskyblue;
+    cursor: pointer;
+}
+
+/* SECCIÓN MAIN */
+main {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+/* ESTILO */
+section {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#inicio div, #reclamos div {
+    margin-bottom: 15px;
+}
+
+/* VIDEOS E IMAGENES RESPONSIVE*/
+img, iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* RESPONSIVE USANDO FLEX */
+#inicio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+#inicio div {
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+/* RESPONSIVE USANDO GRID */
+#mitos .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gridItem img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: lightblue;
+    color: lightcyan;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+/* +Responsive adjustments */
+@media (max-width: 768px) {
+    header, main, section, footer {
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
